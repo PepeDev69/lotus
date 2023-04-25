@@ -1,0 +1,233 @@
+.shop-service {
+	&__container {
+		@apply max-w-[78%];
+	}
+
+	&__product {
+		@apply flex gap-[8.7rem] py-44;
+	}
+
+	&__figure {
+		@apply grid grid-cols-4 grid-rows-3 gap-x-[4.9rem] gap-y-[1.9rem];
+		picture{
+			grid-column: 2 / 5;
+			grid-row: 1 / 4;
+		}
+	}
+
+	&__image {
+		grid-column: 1 / 2;
+		@apply row-span-1 w-full h-full object-cover cursor-pointer;
+		
+		&--active {
+			transition: transform 100ms ease-in-out;
+			@apply cursor-default;
+		}
+	}
+
+	&__info {
+		@apply text-[5rem] flex flex-col items-start mr-[1.55em];
+	}
+
+	&__slug {
+		font-family: "Rubik", sans-serif;
+		@apply text-[.3em] tracking-widest text-gray-400 uppercase font-normal leading-[1.2];
+	}
+
+	&__title {
+		font-family: "Cormorant-Garamond-SemiBold", serif;
+		@apply text-[1em] text-primary font-semibold leading-none mt-[.22em];
+	}
+
+	&__text {
+		@apply text-[1.9rem] text-justify w-[41ch];
+	}
+
+	&__price {
+		font-family: "Cormorant-Garamond-SemiBold", serif;
+		@apply text-[1.2em] text-primary leading-none font-semibold uppercase mt-[.36em];
+	}
+	&__options{
+		@apply mt-[.36em];
+	}
+
+	&__option {
+		@apply text-[0.4em] flex w-fit items-center relative cursor-pointer gap-[.8em];
+		&-price {
+			font-family: "Roboto", sans-serif;
+			@apply font-normal;
+			&--discount {
+				@apply text-silver line-through;
+			}
+		}
+	}
+	&__select {
+		content: "";
+		border: 1.5px solid;
+		background-color: transparent;
+		@apply w-[0.85em] h-[0.85em] border-gray-three rounded-full box-border grid place-items-center;
+		&::after {
+			content: "";
+			transition: opacity 0.3s ease-in-out;
+			@apply absolute w-[.25em] h-[.25em] bg-primary inline-block rounded-full opacity-0;
+		}
+		&.active::after {
+			@apply opacity-100;
+		}
+	}
+
+	&__content__button{
+		@apply mt-[2.5rem] flex items-center;
+		input{
+			appearance: initial;
+		}
+	}
+
+	&__input{
+		@apply flex items-center mr-[3rem];
+		div{
+			@apply flex items-center flex-col ml-[.5rem];
+		}
+		input{
+			font-family: "EBGaramond", sans-serif;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			box-sizing: border-box;
+			@apply text-center w-[4.7rem] h-[4.7rem] rounded-[100%] bg-white text-primary text-[2.3rem] px-[1rem];
+			&::placeholder {
+				@apply text-primary;
+			}
+		}
+		button{
+			font-family: "Rubik-Bold", sans-serif;
+			background-color: transparent;
+			@apply text-primary cursor-pointer border-0 text-[2.5rem] h-[2.3rem];
+		}
+	}
+
+	&__button {
+		font-family: "Roboto", sans-serif;
+		@apply relative font-normal text-[.36em] py-[.88em] rounded-[.55em] px-[1.27em] text-white outline-none border-none cursor-pointer leading-none bg-green-two;
+		span {
+			@apply relative z-10;
+		}
+		&::after {
+			content: "";
+			transition: opacity 0.3s ease-in-out;
+			background-image: linear-gradient(180deg, #377885 0%, #395d64 100%);
+			@apply absolute inset-0 opacity-0 rounded-[.55em];
+		}
+		&:hover::after {
+			@apply opacity-100;
+		}
+	}
+
+	&__extra {
+		@apply text-[2.8rem] px-[2.65em] pb-[18em] relative overflow-hidden;
+		&-titles {
+			border-bottom: 1px solid;
+			@apply flex justify-around border-gray-1200 pb-[.9em];
+		}
+		&-title {
+			font-family: "Cormorant-Garamond-SemiBold ", serif;
+			transition: color 0.3s ease-in-out;
+			@apply text-primary/60 text-[1em] leading-none text-center font-semibold cursor-pointer;
+			&::after {
+				content: "";
+				transition: opacity 0.3s ease-in-out;
+				@apply opacity-0 absolute w-[150%] h-[4px] bg-primary inline-block left-[-25%] bottom-[-98%];
+			}
+			&.active {
+				@apply text-primary relative flex justify-between items-center;
+				&::after {
+					@apply opacity-100;
+				}
+			}
+		}
+	}
+
+	&__description {
+		transition: opacity 0.3s ease-in-out;
+		@apply text-[2.3rem] text-gray-three absolute opacity-0;
+		&.active {
+			@apply opacity-100;
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Roboto-Medium", sans-serif;
+			@apply text-[1em] font-medium mt-[2.2em] mb-[.9em];
+		}
+		p {
+			@apply text-[1.9rem];
+		}
+		li {
+			@apply flex items-center ml-[.5em] text-[1.9rem] mb-[1.5rem] pl-[1.7rem] relative leading-none last:mb-0;
+		}
+		li::before {
+			content: "";
+			@apply w-[.35rem] h-[.35rem] rounded-[50%] bg-gray-three inline-block absolute top-[.9rem] left-0;
+		}
+	}
+	&__additional-info {
+		transition: opacity 0.3s ease-in-out;
+		@apply absolute text-[1.9rem] ml-36 mt-28 opacity-0;
+		&.active {
+			@apply opacity-100;
+		}
+		&-item {
+			@apply flex gap-[1em] mb-[1.6em] items-center;
+		}
+	}
+
+	&__reviews {
+		transition: opacity 0.3s ease-in-out;
+		@apply flex items-start mt-[6.4rem] ml-40 absolute gap-8 opacity-0;
+		&.active {
+			@apply opacity-100;
+		}
+		.image {
+			@apply max-w-[6rem] mt-4;
+		}
+		.service {
+			@apply text-primary text-[2.8rem];
+		}
+
+		.customer {
+			@apply text-[2.3rem] text-primary;
+			span {
+				font-family: "Roboto-Light", sans-serif;
+				@apply text-gray-three font-light text-[.9em];
+			}
+		}
+		.comment {
+			@apply text-[1.8rem] w-[105ch] mt-[.7em];
+		}
+	}
+}
+
+.s-alert {
+	@apply w-[33ch] bg-verdigris/50 text-[2rem] rounded-[.5em] p-[1.3em] mt-[1.5em] max-h-fit h-fit;
+	&__title {
+		font-family: "Roboto-Medium", sans-serif;
+		@apply text-[1em] text-onyx font-medium inline-block mb-[.3em];
+		&::after {
+			content: "\e913";
+			font-family: "icomoon" !important;
+			@apply ml-[.7em] text-primary text-[1.1em];
+		}
+	}
+	&__text {
+		@apply text-[.85em] text-justify text-olive;
+	}
+}
+
+/* == vue transitions == */
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .35s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0
+}

@@ -1,0 +1,8 @@
+###
+# @name VARIABLES
+@BASE_URL = http://localhost/lotus/admin/index.php/wp-json/api
+
+###
+# @name GET_ALL_EMPLOYES
+GET {{BASE_URL}}/bookly/services/all
+Accept: application/json

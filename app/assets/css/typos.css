@@ -1,0 +1,246 @@
+@font-face {
+	font-family: "Roboto-Light";
+	src: url("../fonts/typography/Roboto-Light.eot");
+	src: url("../fonts/typography/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/Roboto-Light.woff2") format("woff2"),
+		url("../fonts/typography/Roboto-Light.woff") format("woff"),
+		url("../fonts/typography/Roboto-Light.ttf") format("truetype"),
+		url("../fonts/typography/Roboto-Light.svg#Roboto-Light") format("svg");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/typography/Roboto-Regular.eot");
+	src: url("../fonts/typography/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/Roboto-Regular.woff2") format("woff2"),
+		url("../fonts/typography/Roboto-Regular.woff") format("woff"),
+		url("../fonts/typography/Roboto-Regular.ttf") format("truetype"),
+		url("../fonts/typography/Roboto-Regular.svg#Roboto-Regular") format("svg");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto-Italic";
+	src: url("../fonts/typography/Roboto-Italic.eot");
+	src: url("../fonts/typography/Roboto-Italic.eot?#iefix") format("embedded-opentype")
+			url("../fonts/typography/Roboto-Italic.woff2") format("woff2"),
+		url("../fonts/typography/Roboto-Italic.woff") format("woff"),
+		url("../fonts/typography/Roboto-Italic.ttf") format("truetype"),
+		url("../fonts/typography/Roboto-Italic.svg#Roboto-Italic") format("svg");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto-Medium";
+	src: url("../fonts/typography/Roboto-Medium.eot");
+	src: url("../fonts/typography/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/Roboto-Medium.woff2") format("woff2"),
+		url("../fonts/typography/Roboto-Medium.woff") format("woff"),
+		url("../fonts/typography/Roboto-Medium.ttf") format("truetype"),
+		url("../fonts/typography/Roboto-Medium.svg#Roboto-Medium") format("svg");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("../fonts/typography/Rubik-Regular.eot");
+	src: url("../fonts/typography/Rubik-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/Rubik-Regular.woff2") format("woff2"),
+		url("../fonts/typography/Rubik-Regular.woff") format("woff"),
+		url("../fonts/typography/Rubik-Regular.ttf") format("truetype"),
+		url("../fonts/typography/Rubik-Regular.svg#Rubik-Medium") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik-Medium";
+	src: url("../fonts/typography/Rubik-Medium.eot");
+	src: url("../fonts/typography/Rubik-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/Rubik-Medium.woff2") format("woff2"),
+		url("../fonts/typography/Rubik-Medium.woff") format("woff"),
+		url("../fonts/typography/Rubik-Medium.ttf") format("truetype"),
+		url("../fonts/typography/Rubik-Medium.svg#Rubik-Medium") format("svg");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Rubik-Bold";
+	src: url("../fonts/typography/Rubik-Bold.eot");
+	src: url("../fonts/typography/Rubik-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/Rubik-Bold.woff2") format("woff2"),
+		url("../fonts/typography/Rubik-Bold.woff") format("woff"),
+		url("../fonts/typography/Rubik-Bold.ttf") format("truetype"),
+		url("../fonts/typography/Rubik-Bold.svg#Rubik-Bold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Cormorant Garamont";
+	src: url("../fonts/typography/CormorantGaramond-Medium.woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Cormorant-Garamond-MediumItalic";
+	src: url("../fonts/typography/CormorantGaramond-MediumItalic.eot");
+	src: url("../fonts/typography/CormorantGaramond-MediumItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/CormorantGaramond-MediumItalic.woff2") format("woff2"),
+		url("../fonts/typography/CormorantGaramond-MediumItalic.woff") format("woff"),
+		url("../fonts/typography/CormorantGaramond-MediumItalic.ttf") format("truetype"),
+		url("../fonts/typography/CormorantGaramond-MediumItalic.svg#CormorantGaramond-MediumItalic")
+			format("svg");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Cormorant-Garamond-Bold";
+	src: url("../fonts/typography/CormorantGaramond-Bold.eot");
+	src: url("../fonts/typography/CormorantGaramond-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/CormorantGaramond-Bold.woff2") format("woff2"),
+		url("../fonts/typography/CormorantGaramond-Bold.woff") format("woff"),
+		url("../fonts/typography/CormorantGaramond-Bold.ttf") format("truetype"),
+		url("../fonts/typography/CormorantGaramond-Bold.svg#CormorantGaramond-Bold") format("svg");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Cormorant-Garamond-SemiBold";
+	src: url("../fonts/typography/CormorantGaramond-SemiBold.eot");
+	src: url("../fonts/typography/CormorantGaramond-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/CormorantGaramond-SemiBold.woff2") format("woff2"),
+		url("../fonts/typography/CormorantGaramond-SemiBold.woff") format("woff"),
+		url("../fonts/typography/CormorantGaramond-SemiBold.ttf") format("truetype"),
+		url("../fonts/typography/CormorantGaramond-SemiBold.svg#CormorantGaramond-SemiBold") format("svg");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Work-Sans";
+	src: url("../fonts/typography/WorkSans-Regular.eot");
+	src: url("../fonts/typography/WorkSans-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/WorkSans-Regular.woff2") format("woff2"),
+		url("../fonts/typography/WorkSans-Regular.woff") format("woff"),
+		url("../fonts/typography/WorkSans-Regular.ttf") format("truetype"),
+		url("../fonts/typography/WorkSans-Regular.svg#WorkSans-Regular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EBGaramond-SemiBold";
+	src: url("../fonts/typography/EBGaramond-SemiBold.eot");
+	src: url("../fonts/typography/EBGaramond-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/EBGaramond-SemiBold.svg#EBGaramond-SemiBold") format("svg"),
+		url("../fonts/typography/EBGaramond-SemiBold.ttf") format("truetype"),
+		url("../fonts/typography/EBGaramond-SemiBold.woff") format("woff"),
+		url("../fonts/typography/EBGaramond-SemiBold.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "EBGaramond";
+	src: url("../fonts/typography/EBGaramond-Bold.eot");
+	src: url("../fonts/typography/EBGaramond-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/typography/EBGaramond-Bold.svg#EBGaramond-Bold") format("svg"),
+		url("../fonts/typography/EBGaramond-Bold.ttf") format("truetype"),
+		url("../fonts/typography/EBGaramond-Bold.woff") format("woff"),
+		url("../fonts/typography/EBGaramond-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/typography/WorkSans-Medium.eot');
+    src: url('../fonts/typography/WorkSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/typography/WorkSans-Medium.woff2') format('woff2'),
+        url('../fonts/typography/WorkSans-Medium.woff') format('woff'),
+        url('../fonts/typography/WorkSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/typography/WorkSans-Regular.eot');
+    src: url('../fonts/typography/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/typography/WorkSans-Regular.woff2') format('woff2'),
+        url('../fonts/typography/WorkSans-Regular.woff') format('woff'),
+        url('../fonts/typography/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/typography/WorkSans-SemiBold.eot');
+    src: url('../fonts/typography/WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/typography/WorkSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/typography/WorkSans-SemiBold.woff') format('woff'),
+        url('../fonts/typography/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/typography/WorkSans-Light.eot');
+    src: url('../fonts/typography/WorkSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/typography/WorkSans-Light.woff2') format('woff2'),
+        url('../fonts/typography/WorkSans-Light.woff') format('woff'),
+        url('../fonts/typography/WorkSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/typography/EBGaramond-Medium.woff2') format('woff2'),
+        url('../fonts/typography/EBGaramond-Medium.woff') format('woff'),
+        url('../fonts/typography/EBGaramond-Medium.ttf') format('truetype'),
+        url('../fonts/typography/EBGaramond-Medium.svg#EBGaramond-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/typography/EBGaramond-MediumItalic.woff2') format('woff2'),
+        url('../fonts/typography/EBGaramond-MediumItalic.woff') format('woff'),
+        url('../fonts/typography/EBGaramond-MediumItalic.ttf') format('truetype'),
+        url('../fonts/typography/EBGaramond-MediumItalic.svg#EBGaramond-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+

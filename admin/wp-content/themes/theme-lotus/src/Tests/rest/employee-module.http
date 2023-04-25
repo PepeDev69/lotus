@@ -1,0 +1,63 @@
+###
+# @name VARIABLES
+# @BASE_URL = http://localhost/lotus/admin/index.php/wp-json/api/bookly/doctor
+@BASE_URL = http://lotusstetic.amgbusiness.us/index.php/wp-json/api/bookly/doctor
+
+###
+# @name GET_ALL_EMPLOYES
+GET {{BASE_URL}}/
+Accept: application/json
+
+
+### 
+# @name GET_EMPLOYE_BY_ID
+GET {{BASE_URL}}/find/5
+Accept: application/json
+
+
+###
+# @name GET_AVAILABLE_EMPLOYES_BY_DATE
+GET {{BASE_URL}}/availables/2022-06-26 08:30:00
+Accept: application/json
+
+
+###
+# @name CREATE_NEW_EMPLOYE
+POST {{BASE_URL}}/create
+Content-Type:application/json
+Accept: application/json multipart/form-data
+
+{
+	"first_name": "Jazmin",
+	"last_name": "Mc'Donals",
+	"gender": "Femenino",
+	"email": "mac@gmail.com",
+	"avatar": "",
+	"position": "Medico Cirujano",
+	"time_start": "08:30:00",
+	"time_end": "19:00:00"
+}
+
+
+###
+# @name UPDATE_EMPLOYE_IF_EXISTS
+POST {{BASE_URL}}/update/1
+Content-Type: application/json
+Accept: application/json multipart/form-data
+
+{
+	"first_name": "Michael Joseph Jackson",
+	"last_name": "I'Collins Lavigne",
+	"gender": "Femenino",
+	"email": "collins50@gmail.com",
+	"avatar": "",
+	"position": "Rinosplastia",
+	"time_start": "08:30:00",
+	"time_end": "19:00:00"
+}
+
+
+###
+# @name DELETE_EMPLOYE_IF_EXISTS
+DELETE {{BASE_URL}}/delete/4
+Accept: application/json

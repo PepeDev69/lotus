@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+input,
+textarea {
+	font-family: var(--font);
+	font-size: inherit;
+	&::placeholder {
+		font-family: inherit;
+		font-weight: 500;
+	}
+}
+fieldset,
+input,
+textarea,
+button {
+	border: none;
+	outline: none;
+	caret-color: var(--ts-primary);
+}
+
+li {
+	list-style: none;
+}
+
+.fill-rule {
+	clip-rule: evenodd;
+	fill-rule: evenodd;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+main,
+article,
+aside,
+section,
+footer {
+	display: block;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+img {
+	border-style: none;
+	max-width: 100%;
+	height: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+input,
+textarea,
+select {
+	border-bottom: 1px solid transparent;
+	transition: 300ms ease-in-out;
+	transition-property: border;
+	&::placeholder {
+		color: var(--ts-grey-500);
+		font-weight: 300;
+	}
+	&:active,
+	&:focus,
+	&:not(:placeholder-shown) {
+		border-bottom-color: var(--ts-cyan-light);
+	}
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+template,
+[hidden] {
+	display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+[role="button"] {
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+::-webkit-scrollbar {
+	width: 11px;
+	background-color: var(--ts-darkest);
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	border: 3px solid var(--ts-darkest);
+	background-color: var(--ts-darkest);
+	transition: background 300ms ease-in-out;
+	&:hover {
+		background-color: var(--ts-grey-600);
+	}
+}
+

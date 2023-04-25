@@ -1,0 +1,227 @@
+
+@BASE_URL = http://lotusstetic.amgbusiness.us/index.php/wp-json/api
+# @BASE_URL = http://localhost/lotus/admin/index.php/wp-json/api
+
+### =============================================== CORE REQUESTS ===================================== ###
+
+### GET PAGE BY TEMPLATE AND LANG, SEO ALLOWED OPTIONAL ###
+GET {{BASE_URL}}/page
+	?template=home
+	&lang=es
+	&seo=allow
+
+### GET PAGE BY TEMPLATE AND LANG, SEO ALLOWED OPTIONAL ###
+GET {{BASE_URL}}/post
+	?type=post
+	&slug=que-es-la-depilacion-ipl-y-cuales-son-sus-beneficios
+	&lang=es
+
+
+### GET POST BY SLUG AND LANG, SEO ALLOWED OPTIONAL ###
+GET {{BASE_URL}}/post
+	?type=post
+	&lang=en
+
+
+### GET POST BY SLUG AND LANG, SEO ALLOWED OPTIONAL ###
+GET {{BASE_URL}}/post-tech
+	?lang=en
+
+
+
+### GET ALL POST BY TYPE ####
+GET {{BASE_URL}}/posts
+	?type=post
+	&lang=es
+
+
+#### GET COMMON POST USED IN ALL PAGES ####
+GET {{BASE_URL}}/common
+	?lang=es
+
+###
+GET {{BASE_URL}}/terms
+	?category=products
+	&lang=es
+
+###
+GET {{BASE_URL}}/terms/first
+	?slug=products
+	&lang=es
+
+###
+GET {{BASE_URL}}/sub-categories
+	?parent=rutina-diaria
+	&lang=es
+
+### GET
+GET {{BASE_URL}}/shop/category
+	?type=products
+	&slug=rutina-diaria
+	&lang=es
+	&subcategory=false
+
+### GET
+GET {{BASE_URL}}/shop/product
+?slug=rutina-diaria
+&lang=es
+&seo=allow
+
+####
+GET {{BASE_URL}}/shop/services
+	?category=laser-hair-removal
+	&limit=8
+	&lang=es
+
+
+####
+GET {{BASE_URL}}/shop/products
+	?category=tratamientos
+	&limit=8
+	&lang=es
+
+
+####
+GET {{BASE_URL}}/get-menu
+
+### ============================================ SHOP REQUEST =========================== ###
+
+@SHOP_URL = {{BASE_URL}}/shop
+
+### GET PRODUCTS BY CATEGORY
+GET {{SHOP_URL}}/products
+	?category=cremas
+	&lang=es
+
+
+#### GET PRODUCT BY SLUG ===
+GET {{SHOP_URL}}/product
+	?slug=humectante-facial-diurno
+	&lang=es
+	&seo=allow
+
+
+### GET SERVICES BY CATEGORY ###
+GET {{SHOP_URL}}/services
+	?category=dermatologia
+	&lang=es
+
+### GET SERVICE BY SLUG AND LANG.OPTIONAL ADD META_SEO
+GET {{SHOP_URL}}/service
+	?slug=calf
+	&lang=es
+	&seo=allow
+
+
+
+###
+
+POST {{SHOP_URL}}/product/verify/268
+Content-Type: application/json
+
+{
+	"qty": 13
+}
+
+
+###
+GET {{SHOP_URL}}/product/paginate
+	?type=products
+	&category=rutina-diaria
+	&lang=es
+	&step=3
+	&page=1
+
+####
+GET {{SHOP_URL}}/product/site-map
+
+
+
+####
+
+POST {{BASE_URL}}/order/create
+Content-Type: application/json
+
+{
+	"user": {
+        "name": "Alexito",
+        "last_name": "Second",
+        "company": "The company",
+        "email": "asegund@gmail.com",
+        "phone": "8954373378",
+        "address_1": "Lima, Huacho 885",
+        "address_2": "Calle las flores 2piso",
+        "city": "Lima",
+        "state": "Lima",
+        "postcode": 857459,
+        "country": ""
+    },
+    "products": [
+        {
+            "id": 382,
+            "quantity": 4
+        }
+    ],
+	"services": [
+		{
+			"id": 180,
+			"paid": 50,
+			"quantity": 1,
+			"doctor": 7,
+			"from": "2022-10-07 10:00:00",
+			"to": "2022-10-07 11:00:00"
+		},
+		{
+			"id": 251,
+			"paid": 50,
+			"quantity": 1,
+			"doctor": 5,
+			"from": "2022-10-07 11:00:00",
+			"to": "2022-10-07 12:00:00"
+		}
+	]
+}
+
+
+####
+POST {{BASE_URL}}/order/verify
+Content-Type: application/json
+
+{
+    "products": [
+        {
+            "id": 382,
+            "quantity": 3
+        },
+		{
+            "id": 262,
+            "quantity": 1
+        }
+    ],
+	"services": [
+		{
+			"id": 180,
+			"paid": 50,
+			"quantity": 1,
+			"doctor": 7,
+			"from": "2022-10-07 10:00:00",
+			"to": "2022-10-07 11:00:00"
+		},
+		{
+			"id": 251,
+			"paid": 50,
+			"quantity": 1,
+			"doctor": 5,
+			"from": "2022-10-07 11:00:00",
+			"to": "2022-10-07 12:00:00"
+		}
+	]
+}
+
+
+###
+GET {{BASE_URL}}/bookly/send-message
+
+
+
+

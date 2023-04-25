@@ -1,0 +1,7 @@
+###
+# @name VARIABLES
+@BASE_URL = http://localhost/lotus/admin/index.php/wp-json/api/bookly/customer
+
+####
+
+GET {{BASE_URL}}/

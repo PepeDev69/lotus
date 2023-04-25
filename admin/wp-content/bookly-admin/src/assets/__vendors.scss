@@ -1,0 +1,82 @@
+// V calendar styles
+@import "v-calendar/dist/style.css";
+
+// Multiselect Options
+@import "@vueform/multiselect/themes/default.css";
+
+// DEFINE STYLE FOR SELECT DROPDOWN
+:root {
+	--ms-bg: var(--ts-grey-800);
+	--ms-dropdown-bg: var(--ts-grey-800);
+	--ms-dropdown-border-width: 0;
+	--ms-option-bg-pointed: var(--ts-grey-700);
+	--ms-option-color-pointed: var(--ts-grey-200);
+	--ms-font-size: 1.5rem;
+	--ms-px: 1.5rem;
+	--ms-option-font-size: 1.5rem;
+	--ms-option-bg-selected: var(--ts-cyan);
+	--ms-option-bg-selected-pointed: var(--ts-cyan);
+}
+
+.multiselect {
+	color: var(--ts-grey-500);
+	border: none;
+	line-height: 1;
+	padding: 0.98em 0.2em;
+	transition: all 500ms ease-in-out;
+	&-search {
+		color: var(--ts-grey-400);
+		border: none;
+		color: inherit;
+		background-color: var(--ts-dark);
+	}
+	&.is-active {
+		box-shadow: none;
+	}
+	&.is-disabled {
+		background-color: var(--ts-dark-mid);
+	}
+	&:focus {
+		outline: none;
+	}
+	&-dropdown {
+		border-radius: 3px;
+		bottom: initial;
+		transform: none;
+		top: 115%;
+		overflow-y: auto;
+		max-height: 20rem;
+		&::-webkit-scrollbar {
+			width: 10px;
+			&-button {
+				height: 0;
+			}
+			&-thumb {
+				border: 2px solid var(--ts-grey-700);
+			}
+		}
+		.empty & {
+			pointer-events: none;
+			&::after {
+				content: "No hay especialistas disponibles";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: var(--ts-grey-800);
+				display: flex;
+				padding: 0.6rem;
+				justify-content: center;
+			}
+		}
+	}
+	&-caret {
+		width: 1rem;
+		width: 1rem;
+	}
+	&-spinner + &-dropdown {
+		opacity: 0.6;
+		pointer-events: none;
+	}
+}

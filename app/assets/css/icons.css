@@ -1,0 +1,96 @@
+@font-face {
+	font-family: "icomoon";
+	src: url("../fonts/icons/icomoon.eot");
+	src: url("../fonts/icons/icomoon.eot") format("embedded-opentype"),
+		url("../fonts/icons/icomoon.ttf") format("truetype"),
+		url("../fonts/icons/icomoon.woff") format("woff"), url("../fonts/icons/icomoon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icomoon" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle:before {
+	content: "\e916";
+}
+.icon-arrow:before {
+	content: "\e915";
+}
+.icon-check:before {
+	content: "\e90e";
+}
+.icon-circle-down:before {
+	content: "\e90f";
+}
+.icon-circle-up:before {
+	content: "\e910";
+}
+.icon-reloj:before {
+	content: "\e911";
+}
+.icon-eye:before {
+	content: "\e912";
+}
+.icon-alert:before {
+	content: "\e913";
+}
+.icon-marks:before {
+	content: "\e914";
+}
+.icon-mastercard:before {
+	content: "\e90b";
+}
+.icon-paypal:before {
+	content: "\e90c";
+}
+.icon-visa:before {
+	content: "\e90d";
+}
+.icon-footer-map:before {
+	content: "\e906";
+}
+.icon-footer-email:before {
+	content: "\e907";
+}
+.icon-footer-phone:before {
+	content: "\e908";
+}
+.icon-footer-instagram:before {
+	content: "\e909";
+}
+.icon-footer-facebook:before {
+	content: "\e90a";
+}
+.icon-header-email:before {
+	content: "\e900";
+}
+.icon-header-instagram:before {
+	content: "\e901";
+}
+.icon-header-facebook:before {
+	content: "\e902";
+}
+.icon-header-phone:before {
+	content: "\e903";
+}
+.icon-header-map:before {
+	content: "\e904";
+}
+.icon-header-shop:before {
+	content: "\e905";
+}

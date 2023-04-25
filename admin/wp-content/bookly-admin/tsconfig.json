@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"target": "es2015",
+		"module": "esnext",
+		"skipLibCheck": true,
+		"moduleResolution": "node",
+		"jsx": "preserve",
+		"allowJs": true,
+		"noImplicitThis": true,
+		"paths": {
+			"@/*": [
+				"./src/*"
+			],
+			"@component/*": [
+				"./src/components/*"
+			],
+			"@service/*": [
+				"./src/services/*"
+			],
+			"~/": [
+				"./*"
+			],
+			"@instance/*": [
+				"./src/instance/*"
+			]
+		},
+		"lib": [
+			"ES2017",
+			"DOM",
+			"WebWorker"
+		]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"src/env.d.ts",
+		"src/components/utils/animations.js",
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

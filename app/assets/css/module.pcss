@@ -1,0 +1,144 @@
+.\@mod-title {
+	font: normal 700 3rem / 1 "Cormorant-Garamond-Bold", serif;
+	@apply text-primary;
+}
+
+/** VUE Animations */
+
+.product-enter,
+.product-leave-to {
+    opacity: 0;
+}
+
+.product-enter {
+    transform: translate3d(0, 50%, 0);
+}
+
+.product-leave-to {
+    transform: translate3d(0, -80%, 0);
+}
+
+.product-leave-active {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.page-enter,
+.page-leave-to {
+	transition: 500ms ease-in-out;
+	transition-property: opacity, transform;
+	opacity: 0;
+}
+
+.page-enter-active,
+.page-leave-active {
+	transition: 500ms ease-in-out;
+	transition-property: opacity, transform;
+}
+.page-leave-active {
+	transition: 500ms ease-in-out;
+	transition-property: opacity, transform;
+	opacity: 1;
+	/* transform: translateY(0); */
+}
+
+
+.pop-up-enter-active {
+    animation: bounceIn 500ms;
+    .immer {
+        span {
+            opacity: 0;
+            animation: flipInX 400ms 200ms;
+        }
+        p {
+            opacity: 0;
+            animation: flipInX 400ms 300ms;
+        }
+    }
+}
+
+.pop-up-leave-active {
+    animation: bounceOut 500ms;
+}
+
+@keyframes bounceOut {
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    50%,
+    55% {
+        opacity: 1;
+        transform: scale3d(1, 1.05, 1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}

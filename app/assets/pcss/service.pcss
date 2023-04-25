@@ -1,0 +1,91 @@
+.shop-category {
+	&__container {
+		@apply pt-[10.5rem] pb-[9.5rem] max-w-[80%];
+	}
+	&__header {
+		@apply flex justify-between;
+	}
+	&__info {
+		@apply w-[69ch] mb-[7rem];
+	}
+
+	&__body {
+		@apply flex mt-6;
+	}
+
+	&__services {
+		@apply grid grid-cols-3 gap-20 flex-1 pr-[13.3rem];
+	}
+	&__aside {
+		@apply text-[2.8rem] mr-56;
+	}
+	&__categories {
+		@apply flex flex-col;
+	}
+	&__aside-title {
+		font-family: "Cormorant Garamont", serif;
+		@apply text-[1em] text-primary font-medium tracking-[-0.03em] leading-none mb-[1.3em];
+		&--2 {
+			@apply mb-[1.6em];
+		}
+	}
+
+	&__category {
+		font-family: "Roboto", sans-serif;
+		transition: all .5s ease-in-out;
+		@apply text-[0.7142em] text-gray-two leading-none mb-[1em];
+		&.active,
+		&:hover {
+			font-family: "Roboto", sans-serif;
+			@apply  text-primary;
+		}
+	}
+
+	&__last-services {
+		@apply mt-[1.6rem];
+	}
+
+	&__last-service {
+		@apply flex text-[2.5rem] gap-[.9em];
+		&:not(:last-child) {
+			@apply mb-[1.16em];
+		}
+		&-picture {
+			@apply max-w-[3.2em] aspect-square;
+		}
+		&-title {
+			font-family: "Cormorant Garamont", serif;
+			@apply text-[1em] tracking-[-0.03em] font-medium text-primary leading-none mb-[.3em];
+		}
+		&-price {
+			font-family: "Roboto-Light", sans-serif;
+			@apply text-[0.76em] leading-none text-gray-500 font-light;
+		}
+	}
+
+	&__pagination {
+		font-family: "EBGaramond", serif;
+		@apply flex items-center text-[2.8rem] gap-[.7em] text-gray-1200 font-bold col-span-3 place-self-center;
+		&-number {
+			@apply text-[1em] cursor-pointer;
+			&.active {
+				@apply text-primary;
+			}
+		}
+		&-arrow {
+			@apply text-[.7em] cursor-pointer;
+		}
+	}
+}
+.s-alert {
+	@apply w-[56ch] bg-verdigris/50 text-[2rem] rounded-[.5em] p-[1.65em] mt-[1.5em] max-h-fit h-fit;
+	&__title {
+		font-family: "Roboto-Medium", sans-serif;
+		@apply text-[1em] text-onyx font-medium inline-block mb-[.3em];
+		&::after {
+			content: "\e913";
+			font-family: "icomoon" !important;
+			@apply ml-[.7em] text-primary text-[1.1em];
+		}
+	}
+}

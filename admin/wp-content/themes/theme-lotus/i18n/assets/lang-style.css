@@ -1,0 +1,11 @@
+
+.wp-list-table [class*="column-language_"] {
+	width: 2em;
+	box-sizing: content-box;
+	vertical-align: middle;
+}
+td.column-description.description p{
+	max-height: 5.4ch;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

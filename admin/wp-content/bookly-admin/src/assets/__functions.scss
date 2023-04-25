@@ -1,0 +1,142 @@
+@use "sass:math";
+// ===========================================================================
+// 	---------- @author Alex Segundo (C) 2021 - @block @variables -------------
+// ===========================================================================
+$max-width: 1400px;
+// =================================================== //
+// ==================  SMARTPHONE ==================== //
+// =================================================== //
+//
+$extra-small: 20em !default; // 320px
+$medium-small: 23.5em !default; // 375px
+$small: 25.5em !default; // 414px
+// =================================================== //
+// ===================== TABLETS  ==================== //
+// =================================================== //
+//
+$extra-md: 31em !default; // 496px
+$medium-md: 34em !default; // 544px
+$medium-md2: 47.93em !default; // 767px
+$md: 48em !default; // 768px
+// =================================================== //
+// ================== SMALL SCREEN  ================== //
+// =================================================== //
+//
+$sm-large: 48.5em !default; // 776px
+$lg: 62em !default; // 992px
+$lg2: 64em !default; // 1024px
+$lg3: 64.06em; //1025px
+$xl: 75em !default; // 1200px
+// =================================================== //
+// ================== LARGE SCREEN  ================== //
+// =================================================== //
+//
+$laptop: 84em !default; // 1344px
+$design: 89em !default; // 1424px
+$xxlarge: 96em !default; // 1536px
+//
+// =================================================== //
+// ================== 4K SCREEN  ================== //
+// =================================================== //
+//
+$xmonitor: 106em !default; // 1700px
+$tv: 120em !default; // 1926px
+//
+$breakpoints: ( xsmall: $extra-small, small: $small, mediunSmall: $medium-md2, medium: $md, large: $lg, large2: $lg2, large3: $lg3, xlarge: $xl, design: $design, xxlarge: $xxlarge, monitor: $xmonitor, tv: $tv, extra: 460px) !default;
+
+
+// ===========================================================================
+// 	---------- @author Alex Segundo (C) 2021 - @block @functions -------------
+// ===========================================================================
+
+// @parameter {css-unit}
+@function valid-unit($unit) {
+    @if (unit($unit)=='px' or unit($unit)=='em' or unit($unit)=='rem') {
+        @return true;
+    }
+    @else {
+        @return false;
+    }
+}
+
+// @parameter {css-unit}
+@function isCoreMedia($size) {
+    @if map-get($breakpoints, $size) {
+        @return true;
+    }
+    @else {
+        @return false;
+    }
+}
+
+// @parameter {css-unit}
+@function isOtherMedia($size) {
+    @if (type-of($size)==number and valid-unit($size)) {
+        @return true;
+    }
+    @else {
+        @return false;
+    }
+}
+
+// @paramenter {number}
+@function rem($size) {
+    @return math.div($size, 16)+rem;
+}
+
+// ===========================================================================
+// 	---------- @author Alex Segundo (C) 2021 - @block @media ----------------
+// ===========================================================================
+@mixin media-from($width) {
+    @if isCoreMedia($width) {
+        @media screen and(min-width: map-get($breakpoints, $width)) {
+            @content;
+        }
+    }
+    @else if isOtherMedia($width) {
+        @media screen and(min-width: $width) {
+            @content;
+        }
+    }
+    @else {
+        @error "@mixin 'from' a need valid css unit value. Invalid value #{$width}";
+    }
+}
+
+@mixin media-to($width) {
+    @if isCoreMedia($width) {
+        @media screen and(max-width: map-get($breakpoints, $width)) {
+            @content;
+        }
+    }
+    @else if isOtherMedia($width) {
+        @media screen and(max-width: $width) {
+            @content;
+        }
+    }
+    @else {
+        @error "@mixin 'to' a need valid css unit value. Invalid value #{$width}";
+    }
+}
+
+@mixin media-from-to($from, $to) {
+    @if isCoreMedia($from) and isCoreMedia($to) {
+        $f: map-get($breakpoints, $from);
+        $t: map-get($breakpoints, $to);
+        $min: math.min($f, $t);
+        $max: math.max($f, $t);
+        @media screen and(min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    }
+    @else if isOtherMedia($from) and isOtherMedia($to) {
+        $min: math.min($from, $to);
+        $max: math.max($from, $to);
+        @media screen and(min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    }
+    @else {
+        @error "@mixin 'from-to' a need valid css unit value. Invalid '#{$width}'";
+    }
+}

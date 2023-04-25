@@ -1,0 +1,42 @@
+:root {
+	--primary: #FCEBE5;
+	--dark: #0B0911;
+	--light: #D8D6DB;
+	--grey: #352D4C;
+	--dark-primary: #24292e;
+	--ts-primary: rgb(251, 144, 103);
+	--ts-primary-alpha: #f37949dc;
+	--ts-primary-light: #e39f84;
+	--ts-purple: #8a3ffc;
+	--ts-cyan: #0072c3;
+	--ts-cyan-alpha: rgba(3, 122, 207, 0.156);
+	--ts-cyan-medium: rgba(3, 122, 207, 0.244);
+	--ts-cyan-light: #00b1fd;
+	--ts-orange: #ff832b;
+	/* --ts-orange-alpha: rgba(205, 55, 0, 0.863); */
+	--font: "IBM Plex Sans";
+
+	--ts-grey: #212e36;
+	--ts-dark: #212e36;
+    --ts-darker: #192229;
+    --ts-darkest: #121a21;
+    --ts-dark-soft: #161f26;
+    --ts-grey-dark: #1b2831;
+	--ts-dark-mid: #2b3944;
+
+	--ts-grey-100: #fbfdfe;
+    --ts-grey-200: #f9fafb;
+    --ts-grey-300: #ecf0f3;
+    --ts-grey-400: #b7c1c8;
+    --ts-grey-500: #8e9ba4;
+    --ts-grey-600: #687782;
+    --ts-grey-700: #273b49;
+    --ts-grey-800: #28353e;
+    --ts-grey-900: #192229;
+
+	--ts-font-size: 1.6rem;
+
+	@include media-from(monitor) {
+		--ts-font-size: 1.7rem;
+	}
+}

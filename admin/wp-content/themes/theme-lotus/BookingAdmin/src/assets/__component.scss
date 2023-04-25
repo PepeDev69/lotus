@@ -1,0 +1,51 @@
+.t-round {
+	border-radius: 0.4rem;
+}
+
+.t-box {
+	border: 1px solid var(--ts-grey-800);
+	background-color: var(--ts-dark-soft);
+	padding: 3.8rem;
+	border-radius: 0.5rem;
+}
+
+.tx-title {
+	font: normal 500 3rem /1 var(--font);
+	color: var(--ts-orange);
+	padding-bottom: 0.75em;
+	text-align: center;
+}
+
+.tx-textarea {
+	font: normal 500 1.5rem / 1 var(--font);
+	background-color: var(--ts-dark);
+	color: var(--ts-grey-500);
+	width: 100%;
+	resize: none;
+	min-height: 6.6ch;
+	padding: 0.7em 1em;
+}
+
+.tx-input {
+	display: inline-block;
+    background-color: var(--ts-dark);
+    border: none;
+    padding: 0.7em 1em;
+    line-height: 1;
+    color: var(--ts-grey-400);
+    width: 100%;
+    border-radius: 0.4rem;
+	font-size: 1.5rem;
+}
+
+
+.n-focused {
+	border-bottom: 1px solid transparent;
+	transition: 300ms ease-in-out;
+	transition-property: border;
+	&:active,
+	&:focus,
+	&:not(:placeholder-shown) {
+		border-bottom-color: var(--ts-cyan-light);
+	}
+}

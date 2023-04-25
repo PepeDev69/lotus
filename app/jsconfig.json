@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"jsx": "preserve",
+		"baseUrl": ".",
+		"paths": {
+			"~/*": [
+				"./*"
+			],
+			"@/*": [
+				"./*"
+			],
+			"~~/*": [
+				"./*"
+			],
+			"@@/*": [
+				"./*"
+			],
+			"@function/*": [
+				"./functions/*"
+			]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		".nuxt",
+		"dist"
+	],
+	"include": [
+		"./**/*"
+	]
+}

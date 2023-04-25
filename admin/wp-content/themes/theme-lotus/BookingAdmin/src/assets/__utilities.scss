@@ -1,0 +1,79 @@
+.t-init {
+	margin: 0;
+}
+
+.t-fixed {
+	position: fixed;
+}
+.t-relative {
+	position: relative;
+}
+.t-absolute{
+	position: absolute;
+}
+
+.inset-top,
+.inset-y,
+.inset {
+	top: 0;
+}
+.inset-bottom,
+.inset-y,
+.inset {
+	bottom: 0;
+}
+.inset-left,
+.inset-x,
+.inset {
+	left: 0;
+}
+.inset-right,
+.inset-x,
+.inset {
+	right: 0;
+}
+
+
+.t-flex, 
+.t-column, 
+.t-column-reverse, 
+.t-cross-baseline, 
+.t-cross-center, 
+.t-cross-end, 
+.t-cross-start, 
+.t-main-center, 
+.t-main-distribute, 
+.t-main-end, 
+.t-main-justify, 
+.t-main-start, 
+.t-row, 
+.t-row-reverse,
+.t-abs-center{
+	display: flex;
+}
+
+.t-cross-center,
+.t-abs-center {
+	justify-content: center;
+	align-content: center;
+}
+.t-main-center,
+.t-abs-center {
+	align-items: center;
+	justify-items: center;
+}
+
+.t-main-distribute {
+	justify-content: space-between;
+}
+
+.t-colum {
+	flex-direction: column;
+}
+
+.t-h-full {
+	height: 100%;
+}
+.t-w-full {
+	width: 100%;
+}

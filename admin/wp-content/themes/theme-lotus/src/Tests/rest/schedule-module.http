@@ -1,0 +1,80 @@
+# @BASE_URL = http://localhost/lotus/admin/index.php/wp-json/api/bookly/schedule
+@BASE_URL = http://lotusstetic.amgbusiness.us/index.php/wp-json/api/bookly/schedule
+
+
+###
+# @name REQUEST_GET_ALL_SCHEDULE
+GET {{BASE_URL}}/
+Accept: application/json
+
+
+###
+# @name REQUEST_GET_SCHEDULES_BY_DATE
+GET {{BASE_URL}}/find-by-date/2022-06-30
+Accept: application/json
+
+###
+# @name REQUEST_GET_SCHEDULES_BY_DATE
+GET {{BASE_URL}}/find-by-doctor/3
+Accept: application/json
+
+
+###
+# @name REQUEST_GET_A_SCHEDULE_BY_ID
+GET {{BASE_URL}}/find/14
+Accept: application/json
+
+
+###
+# @name REQUEST_CREATE_A_SCHEDULE
+POST {{BASE_URL}}/create
+Content-Type: application/json
+
+{
+  	"from": "2022-07-09 12:00:00",
+  	"to": "2022-07-09 12:30:00",
+	"doctor": 6,
+	"service": 245,
+	"customer": {
+		"id": 16,
+		"name": "Marcus ICollins",
+		"phone": 907845385,
+		"email": "eaxmple@htma.com",
+		"address": "",
+		"note": "El cliente Nota",
+		"paid": 50
+	}
+}
+
+
+### TODO Customer Update Error With if contains Same Value
+# @name REQUEST_GET_SCHEDULE_BY_DATE
+PUT {{BASE_URL}}/update/13
+Content-Type: application/json
+
+{
+	"from": "2022-06-29 15:00:00",
+  	"to": "2022-06-29 15:30:00",
+	"doctor": 6,
+	"service": "251",
+	"customer": {
+		"id": 2,
+		"name": "Junior Segundo Ramos",
+		"note": "Una nota adicional para saber que quiere el dueno del sitio",
+		"paid": 70,
+		"phone": "90767234",
+		"address": "Av. Los Eucaliptos 245",
+		"email": "llaguento@gmail.com"
+	}
+}
+
+
+### 
+# @name REQUEST_DELETE_SCHEDULE_BY_ID
+DELETE {{BASE_URL}}/delete/13
+
+
+
+###
+GET {{BASE_URL}}/date-range/2022-06-29
+

@@ -1,0 +1,36 @@
+.main-checkout {
+	@apply bg-linen;
+}
+
+.p-checkout {
+	@apply py-[4rem];
+	&__section {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5rem;
+	}
+	@media screen(lg) {
+		@apply py-[9rem];
+		&__section {
+			flex-direction: row;
+			column-gap: 11%;
+		}
+		.p-cart-form {
+			width: 60%;
+		}
+		.p-cart-check {
+			width: 40%;
+		}
+	}
+	@media screen(monitor) {
+		@apply py-[12rem];
+	}
+}
+
+/** --molecule  */
+.p-variant-resume {
+	background-color: #DBEDF0;
+	position: sticky;
+	top: var(--top-height);
+	padding: calc(var(--p-font-size) * 2.2);
+}

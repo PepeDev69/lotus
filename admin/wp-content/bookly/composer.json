@@ -1,0 +1,17 @@
+{
+    "name": "junio/bookly",
+    "autoload": {
+        "psr-4": {
+            "Bookly\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Segundo",
+            "email": "asegundo442@gmail.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "^6.38"
+    }
+}
